@@ -10,7 +10,7 @@ _start:
     mov X1, sp
     mov X2, #10
 
-convert_to_string:
+convert_loop:
     udiv X3, X0, X2      // 2024 / 10 = 202
     msub X4, X3, X2, X0  // 2024 - (202 * 10) = 4 -> 2024 % 10 = 4
     add X4, X4, #'0'
@@ -23,7 +23,7 @@ convert_to_string:
     mov X0, X3
     // zero check
     cmp X3, #0
-    b.ne convert_to_string
+    b.ne convert_loop
 
 print_string:
     mov X0, #1
