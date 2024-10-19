@@ -22,6 +22,7 @@ convert_loop:
     // prepare next loop
     mov X0, X3
     // zero check
+    // cbnz X3, convert_loop
     cmp X3, #0
     b.ne convert_loop
 
