@@ -2,8 +2,11 @@
 .align 2
 
 _start:
-    // set const
-    mov X0, #2024
+    mov X0, #8
+    mov X1, #15
+    add X2, X0, X1 // Calculate
+
+    mov X0, X2
     mov X1, sp
     mov X2, #10
 
