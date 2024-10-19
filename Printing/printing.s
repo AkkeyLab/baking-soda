@@ -28,7 +28,7 @@ convert_to_string:
 print_string:
     mov X0, #1
     // mov X1, X1
-    mov X2, #4
+    mov X2, #2
     mov X16, #4
     svc #0x80
 
